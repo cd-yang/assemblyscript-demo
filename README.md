@@ -1,6 +1,8 @@
 # assemblyscript-demo
 
-1. add assembly logic in *assembly/index.ts*
+## demo for compiling and debugging AssemblyScript
+
+1. add logic in *assembly/index.ts*
 
 2. run script to build wasm
 ``` npm
