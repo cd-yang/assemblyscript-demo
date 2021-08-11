@@ -1,0 +1,21 @@
+{
+  "name": "assemblyscripttest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "asmScriptTest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.19.10"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.19.10"
+  }
+}
