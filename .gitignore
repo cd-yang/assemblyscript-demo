@@ -1,2 +1,5 @@
 node_modules/
 build/*.wat
+*.wasm
+*.wat
+*.map

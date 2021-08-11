@@ -1,5 +1,13 @@
-const fs = require("fs");
-const loader = require("@assemblyscript/loader");
-const imports = { /* imports go here */ };
-const wasmModule = loader.instantiateSync(fs.readFileSync(__dirname + "/build/optimized.wasm"), imports);
-module.exports = wasmModule.exports;
+import { wasmBrowserInstantiate } from "./instantiateWasm.js";
+
+const runWasmAdd = async () => {
+    // Instantiate our wasm module
+    const wasmModule = await wasmBrowserInstantiate("./untouched.wasm");
+
+    // Call the Add function export from wasm, save the result
+    const addResult = wasmModule.instance.exports.add(24, 24);
+
+    // Set the result onto the body
+    document.body.textContent = `Hello World! addResult: ${addResult}`;
+};
+runWasmAdd();
